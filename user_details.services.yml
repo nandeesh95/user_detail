@@ -1,0 +1,9 @@
+services:
+  user_details.user_login_detials:
+   class: Drupal\user_details\Service\UserLoginController
+   arguments: ['@user.auth']
+
+  user_details.user_details_block:
+    class: Drupal\user_details\Service\UserDetailsController
+    arguments: ['@current_user']
+

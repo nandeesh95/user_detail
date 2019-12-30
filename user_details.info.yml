@@ -1,0 +1,7 @@
+name: User Details
+type: module
+description: Define a custom block for getting Loggedin User Details.
+core: 8.x
+package: Custom
+dependencies:
+  - block
