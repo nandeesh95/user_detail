@@ -4,7 +4,6 @@
 namespace Drupal\user_details\Service;
 
 use Drupal\Core\Session\AccountProxy;
-use Drupal\user\Entity\User;
 
 final class UserDetailsController
 {
@@ -13,6 +12,7 @@ final class UserDetailsController
 
   /**
    * {@inheritdoc}
+   * Getting Current user Details using Drupal Service Api
    */
   public function __construct(AccountProxy $current_user)
   {
@@ -22,12 +22,6 @@ final class UserDetailsController
   /**
    * {@inheritdoc}
    */
-//  public static function create(ContainerInterface $container)
-//  {
-//    return new static(
-//      $container->get('current_user')
-//    );
-//  }
     public function CurrentUserId() {
         return $this->currentUser->id();
     }
