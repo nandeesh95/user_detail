@@ -23,9 +23,9 @@ class UserDetailsBlock extends BlockBase
    */
   public function build()
   {
-    $user = \Drupal::currentUser()->id();
+    $currentuser_id = \Drupal::service('user_details.user_details_block')->CurrentUserId();
     $uid = \Drupal::entityQuery('user')
-      ->condition('uid', $user)
+      ->condition('uid', $currentuser_id)
       ->execute();
     $current_user = array_values($uid);
     $users = User::load($current_user[0]);

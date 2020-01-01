@@ -22,11 +22,14 @@ final class UserDetailsController
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container)
-  {
-    return new static(
-      $container->get('current_user')
-    );
-  }
+//  public static function create(ContainerInterface $container)
+//  {
+//    return new static(
+//      $container->get('current_user')
+//    );
+//  }
+    public function CurrentUserId() {
+        return $this->currentUser->id();
+    }
 }
 
